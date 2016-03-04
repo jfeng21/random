@@ -19,7 +19,7 @@ public class SumNodeTree {
         int sum = sum(n);
         System.out.println(sum);
         
-        //conert arry to BST
+        //convert arry to BST
         int array[] = new int[]{1,2,3,4,5,6,7,8,9};
         int len = array.length;
         TreeNode root = sortedArrayToBST(array, 0, len-1);
