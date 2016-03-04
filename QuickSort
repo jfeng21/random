@@ -1,0 +1,51 @@
+public class QuickSort {
+
+    private int length;
+    private int num[];
+
+    public int[] sort(int[] input) {
+              if(input.length == 0)
+            System.out.println("No input");
+        if (input == null || input.length == 0) {
+            return null;
+        }
+        this.num = input;
+        length = num.length - 1;
+      quickSort(0,length); 
+      return input;
+    } 
+     private void quickSort(int lo, int hi){ 
+        if (lo >= hi) {
+            return ;
+        }
+        int mi = lo + (hi - lo) / 2;   //pick pivot
+      //  int pivot = num[mi];
+        int pivot = num[hi];  //make left < pivot; right > pivot
+        int i = lo, j = hi;
+        while (i <= j) {
+            while (num[i] < pivot) {
+                i++;
+            }
+        
+        while (num[j] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            int temp = num[i];
+            num[i] = num[j];
+            num[j] = temp;
+            
+            i++;
+            j--;
+        }
+        }
+
+     if(lo < j){
+     quickSort(lo,j);
+}
+  if(i<hi){
+quickSort(i,hi);
+}
+     }
+
+}
