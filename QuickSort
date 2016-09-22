@@ -1,3 +1,5 @@
+//http://www.newthinktank.com/2013/03/java-quick-sort/
+
 public class QuickSort {
 
     private int length;
